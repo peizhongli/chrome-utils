@@ -1,12 +1,38 @@
-# React + Vite
+## 浏览器插件功能
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 功能一：右键菜单清除缓存并硬刷新
 
-Currently, two official plugins are available:
+在浏览器右键菜单中增加 "清除缓存并硬刷新" 功能，类似于开发者工具开启时的强制刷新行为，适用于快速重载页面及其缓存资源。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 功能二：点击插件按钮清除本地存储
 
-## Expanding the ESLint configuration
+点击插件图标后，将自动清除以下本地数据：
+- localStorage
+- cookies
+- IndexedDB
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 插件使用说明
+
+1. **安装插件**：通过 Chrome 扩展程序加载 `dist/` 目录中的内容。
+2. **右键菜单**：在网页上右键选择 "清除缓存并硬刷新" 来强制刷新页面。
+3. **点击插件按钮**：清除当前页面的本地存储数据。
+
+## 技术栈
+
+- React v19.1.0
+- React DOM v19.1.0
+- Vite v7.0.4
+- ESLint v9.30.1
+- @vitejs/plugin-react v4.6.0
+
+## 环境要求
+
+- Node.js >= 18.x（支持 ES Module）
+- npm 或 pnpm 包管理器
+
+## 构建与部署
+
+- 开发环境启动: `npm run dev`
+- 构建命令: `npm run build`
+- 本地运行: `npm run preview`
+- 部署方式: 将 `dist/` 目录内容部署到静态资源服务器
