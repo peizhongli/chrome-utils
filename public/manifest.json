@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome utils",
+  "version": "1.0",
+  "description": "An extension to help something.",
+  "permissions": [
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage",
+    "tabs",
+    "scripting",
+    "webRequest",
+    "activeTab",
+    "contextMenus",
+    "windows",
+    "notifications"
+  ],
+  "host_permissions": ["*://*/*"],
+  "icons": {
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["public/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
